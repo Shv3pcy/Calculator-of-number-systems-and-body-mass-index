@@ -9,15 +9,6 @@ import asyncio
 from aiogram.types import (InlineKeyboardMarkup, InlineKeyboardButton)
 from calculate import bmi_calc, sys10_2, sys2_10
 
-"""                                          
-                Проект по информатике  ╱▔▔╲╱▔▔╲    
-                за 8 класс.            ▏┈╭╮╭╮┈▕    
-                Хайитов А.             ╲┈┏━━┓┈╱    
-                  &                     ╲╰━━╯╱   
-                Конугаев Д.              ╲┈┈╱  
-                Марселю Фаргатовичу.      ╲╱                                     
-"""
-
 class Register(StatesGroup):  # класс, в котором создаем группу регистров
   body_weight = State()       # регистр для массы тела
   body_height = State()       # регистр для роста тела
@@ -27,7 +18,7 @@ class Register(StatesGroup):  # класс, в котором создаем г�
 router = Router() # класс, который будет распределяться в обработчике команд Dispatcher()
 
 async def main():
-  bot = Bot(token='8108904832:AAEd1g14LFSVp0LYoxzbPr2ElnEaS7DZ5Yg') # API-токен для бота
+  bot = Bot(token='token') # API-токен для бота
   dp = Dispatcher() # обработчик команд
   dp.include_router(router)
   await dp.start_polling(bot)
